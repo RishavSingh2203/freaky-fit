@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/pwa-icons/apple-touch-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Additional meta tags for broader browser compatibility -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="description" content="AI-powered fitness app for personalized workouts and meal plans" />
+    <title>BodyMind AI - AI Powered Fitness</title>
+    <script>
+      // On page load, apply theme from localStorage or use light as default
+      (function() {
+        var storedTheme = localStorage.getItem('bodymind-ai-theme');
+        
+        if (storedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          // Default to light mode if no preference saved
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
